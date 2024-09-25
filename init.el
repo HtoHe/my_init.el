@@ -15,6 +15,7 @@
 
 (require 'evil)
 (evil-mode 1)
+(evil-set-undo-system 'undo-redo)
 
 ;;(global-flycheck-mode)
 
@@ -43,9 +44,12 @@
 
 ;;(setq pdf-view-restore-filename "~/.emacs.d/.pdf-view-restore")
 
- ;; custom setting(ui)
-(add-to-list 'default-frame-alist
-             '(font . "DejaVu Sans Mono-10"))
+;;custom setting(ui)
+;;(add-to-list 'default-frame-alist
+;;             '(font . "DejaVu Sans Mono-10"))
+(set-face-attribute 'default nil :family "Dejavu Sans Mono")
+(set-face-attribute 'default nil :height 130)
+(set-fontset-font t 'hangul (font-spec :name "NanumGothicCoding"))
 
 (setq ring-bell-function 'ignore)
 
